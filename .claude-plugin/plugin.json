@@ -1,0 +1,9 @@
+{
+  "name": "english-learning-tool",
+  "version": "0.1.0",
+  "description": "English translation and sentence-pattern explanation skills.",
+  "license": "MIT",
+  "author": {
+    "name": "vincent97277"
+  }
+}
