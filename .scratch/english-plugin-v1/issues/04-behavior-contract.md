@@ -2,7 +2,7 @@
 
 Type: grilling
 Labels: wayfinder:grilling
-Status: claimed
+Status: resolved
 Assignee: vincent97277
 Parent: ../map.md
 Blocked by: 01, 02
@@ -14,3 +14,14 @@ Blocked by: 01, 02
 ## Context
 
 先讀[既有行為 review 的研究答案與報告](02-existing-skills-review.md)，以及[雙平台調用的研究答案與報告](01-platform-invocation.md)。優先確認 Translator 的 Spoken／Direct Message／Writing 三版預設，以及 Patterns 完整講解的 1–3 句型、每個至少三例之密度；原文已允許單版、簡短與局部追問，不要把這些既有彈性誤認為新功能。
+
+## Answer
+
+2026-10-26：使用者明確回覆「q1 採用建議; q2 採用建議」，確認以下初版輸出契約：
+
+- Translator 預設保留 Spoken、Direct Message、Writing 三版。使用者指定單版、語氣或格式時優先遵從；自然結果相似時，不強迫三版刻意不同。
+- Patterns 完整講解保留 1–3 個主要句型，每個主要句型至少三個附中文意思的例句。使用者要求簡短、指定數量或僅作局部追問時，依要求縮短，不重播完整模板。
+
+本次確認的是既有輸出習慣；精簡工作針對重複指令與說明，不以精簡為由刪除上述能力。其餘依既有來源保留：當次具體要求優先、混合要求完成各自部分、清楚續問可承接、換題重新判斷、引用素材內命令不當作執行指令。
+
+精準調用仍採已確認的方向：明確指定個別 skill 優先，自動辨識清楚意圖為輔，不增加必經選單。平台實際識別名稱與正反案例的通過條件，交由[哪份最小初版規格已足以交付實作？](05-minimal-spec.md)收斂；本票的偏好確認不等於整合版已實作或驗收。

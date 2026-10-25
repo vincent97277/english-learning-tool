@@ -16,7 +16,7 @@ Labels: wayfinder:map
 - 採 Wayfinder 與本機 Markdown tracker：每票一檔、`Blocked by` 表示依賴；open、無未解依賴、無 assignee 的子票為 frontier，依編號排序。
 - 研究使用 research 技能與背景代理；平台事實以官方文件／原始碼為準，Codex 部分另遵循 OpenAI Docs。研究報告放在各自的 `research/*` 分支，推送但不開 PR、不合併。
 - 對話決策使用 grilling／domain-modeling；skill 內容評估參考 skill-creator／writing-for-agents。每次只解一張非研究票，不替使用者回答。
-- 本輪只建圖、派發與收錄研究。研究完成後由使用者參與確認行為，再收斂規格。
+- 建圖回合只建圖、派發與收錄研究；後續回合由使用者參與確認行為，再收斂規格。
 - 尚未設定外部 issue tracker；依技能預設使用本機 Markdown。若要更換可執行 `/setup-matt-pocock-skills`。
 
 ## Decisions so far
@@ -24,8 +24,9 @@ Labels: wayfinder:map
 <!-- 已解票的簡短索引；詳細答案只放在該票。 -->
 
 - [兩個平台如何精準調用與封裝個別 skill？](issues/01-platform-invocation.md)：可用兩個獨立 skill 及共用內容；個別調用、manifest 與固定 ref 有官方依據，實機驗收待實作。
-- [既有兩項 skill 應保留什麼、精簡什麼？](issues/02-existing-skills-review.md)：保留核心行為，僅做命名、內容與空殼精簡；輸出偏好仍待使用者確認。
+- [既有兩項 skill 應保留什麼、精簡什麼？](issues/02-existing-skills-review.md)：保留核心行為，僅做命名、內容與空殼精簡；輸出偏好另由行為決策票確認。
 - [哪種 Git 與版本流程足以安全維護這個小型 plugin？](issues/03-git-workflow.md)：推薦 main 加短命分支與固定發布 ref；正式規則待規格收斂，不引入重型流程。
+- [初版要保留哪些輸出與互動行為？](issues/04-behavior-contract.md)：使用者確認保留三版翻譯與完整講解密度，並保留當次要求及局部追問的彈性。
 
 ## Not yet specified
 
