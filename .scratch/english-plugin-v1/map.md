@@ -23,12 +23,13 @@ Labels: wayfinder:map
 
 <!-- 已解票的簡短索引；詳細答案只放在該票。 -->
 
+- [兩個平台如何精準調用與封裝個別 skill？](issues/01-platform-invocation.md)：可用兩個獨立 skill 及共用內容；個別調用、manifest 與固定 ref 有官方依據，實機驗收待實作。
 - [既有兩項 skill 應保留什麼、精簡什麼？](issues/02-existing-skills-review.md)：保留核心行為，僅做命名、內容與空殼精簡；輸出偏好仍待使用者確認。
 - [哪種 Git 與版本流程足以安全維護這個小型 plugin？](issues/03-git-workflow.md)：推薦 main 加短命分支與固定發布 ref；正式規則待規格收斂，不引入重型流程。
 
 ## Not yet specified
 
-- 平台實際限制或內容 review 可能揭露的相容性例外，待研究後判斷是否值得納入初版。
+- 本輪研究未留下需要另開票的模糊區域。已知平台相容性與固定 ref 的實測缺口，納入最小規格票的驗收門檻；若後續證據產生新的決策，再新增票。
 
 ## Out of scope
 
