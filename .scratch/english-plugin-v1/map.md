@@ -2,6 +2,7 @@
 
 Type: map
 Labels: wayfinder:map
+Status: resolved
 
 ## Destination
 
@@ -17,6 +18,7 @@ Labels: wayfinder:map
 - 研究使用 research 技能與背景代理；平台事實以官方文件／原始碼為準，Codex 部分另遵循 OpenAI Docs。研究報告放在各自的 `research/*` 分支，推送但不開 PR、不合併。
 - 對話決策使用 grilling／domain-modeling；skill 內容評估參考 skill-creator／writing-for-agents。每次只解一張非研究票，不替使用者回答。
 - 建圖回合只建圖、派發與收錄研究；後續回合由使用者參與確認行為，再收斂規格。
+- 2026-10-26 規劃結案：五張決策票皆已完成，初版規格已確認；後續進入實作階段，平台驗收依規格執行。
 - 尚未設定外部 issue tracker；依技能預設使用本機 Markdown。若要更換可執行 `/setup-matt-pocock-skills`。
 
 ## Decisions so far
@@ -25,12 +27,13 @@ Labels: wayfinder:map
 
 - [兩個平台如何精準調用與封裝個別 skill？](issues/01-platform-invocation.md)：可用兩個獨立 skill 及共用內容；個別調用、manifest 與固定 ref 有官方依據，實機驗收待實作。
 - [既有兩項 skill 應保留什麼、精簡什麼？](issues/02-existing-skills-review.md)：保留核心行為，僅做命名、內容與空殼精簡；輸出偏好另由行為決策票確認。
-- [哪種 Git 與版本流程足以安全維護這個小型 plugin？](issues/03-git-workflow.md)：推薦 main 加短命分支與固定發布 ref；正式規則待規格收斂，不引入重型流程。
+- [哪種 Git 與版本流程足以安全維護這個小型 plugin？](issues/03-git-workflow.md)：完成 main 加短命分支與固定發布 ref 的研究；正式維護規則由規格決策採納。
 - [初版要保留哪些輸出與互動行為？](issues/04-behavior-contract.md)：使用者確認保留三版翻譯與完整講解密度，並保留當次要求及局部追問的彈性。
+- [哪份最小初版規格已足以交付實作？](issues/05-minimal-spec.md)：使用者採用初版規格，識別名稱、交付內容、驗收與 Git 流程已可交付實作。
 
 ## Not yet specified
 
-- 本輪研究未留下需要另開票的模糊區域。已知平台相容性與固定 ref 的實測缺口，納入最小規格票的驗收門檻；若後續證據產生新的決策，再新增票。
+- 無尚待規劃的決策。已知平台相容性與固定 ref 的實測缺口已納入規格的實作驗收條件；它們不是已通過的驗收紀錄。
 
 ## Out of scope
 

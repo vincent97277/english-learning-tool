@@ -2,7 +2,7 @@
 
 Type: grilling
 Labels: wayfinder:grilling
-Status: claimed
+Status: resolved
 Assignee: vincent97277
 Parent: ../map.md
 Blocked by: 01, 02, 03, 04
@@ -17,8 +17,16 @@ Blocked by: 01, 02, 03, 04
 
 ## Assets
 
-- [初版規格草案](../spec.md)：待使用者確認，尚未作為實作授權或已驗收聲明。
+- [已確認的初版規格](../spec.md)：後續實作依據，平台驗收仍須實際執行。
 
 ## Comments
 
 2026-10-26：已完成可審閱草案。提案採 `english-learning-tool` 一包兩個 skill、共用內容與各平台必要封裝；保留已確認輸出，將 discovery、明確調用、舊 plugin 並存與固定 ref 列為實作驗收門檻；Git 流程依研究採初版 main、後續短命分支與 PR。待使用者確認是否以整份草案作實作依據；未確認前維持 claimed，不記 resolution。
+
+## Answer
+
+2026-10-26：在展示具體草案並詢問是否採用後，使用者回覆「Next」；依對話上下文確認採用該草案，規格標記為已確認。本票完成，Wayfinder 的研究與初版規格目的地已達成。
+
+採納的實作依據為上方連結的 `spec.md`：一包兩個獨立 skill、共用內容與必要平台封裝；保留已確認輸出契約；採初版 main、發布後短命分支與 PR、固定版本來源的維護流程。所有平台載入、調用、舊 plugin 並存與固定 ref 的實測，留作實作階段的完成條件。
+
+本次結案完成的是規劃，不把規格確認記成 plugin 已實作、安裝、驗收或發布，也不因此改動既有已安裝 plugin。
