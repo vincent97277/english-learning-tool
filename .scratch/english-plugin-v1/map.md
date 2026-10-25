@@ -23,6 +23,9 @@ Labels: wayfinder:map
 
 <!-- 已解票的簡短索引；詳細答案只放在該票。 -->
 
+- [既有兩項 skill 應保留什麼、精簡什麼？](issues/02-existing-skills-review.md)：保留核心行為，僅做命名、內容與空殼精簡；輸出偏好仍待使用者確認。
+- [哪種 Git 與版本流程足以安全維護這個小型 plugin？](issues/03-git-workflow.md)：推薦 main 加短命分支與固定發布 ref；正式規則待規格收斂，不引入重型流程。
+
 ## Not yet specified
 
 - 平台實際限制或內容 review 可能揭露的相容性例外，待研究後判斷是否值得納入初版。

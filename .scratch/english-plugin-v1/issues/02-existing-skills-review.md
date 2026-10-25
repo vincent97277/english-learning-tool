@@ -2,7 +2,7 @@
 
 Type: research
 Labels: wayfinder:research
-Status: claimed
+Status: resolved
 Assignee: vincent97277
 Parent: ../map.md
 Blocked by: none
@@ -15,4 +15,10 @@ Blocked by: none
 
 ## Assets
 
-- 預定報告：`research/existing-skills-review` 分支的 `docs/research/existing-skills-review.md`。
+- [既有行為 review 報告](https://github.com/vincent97277/english-learning-tool/blob/d78df68d11441f65f04a7e05b739f42c4c907e44/docs/research/existing-skills-review.md)，保存在 `research/existing-skills-review`，未開 PR、未合併。
+
+## Answer
+
+2026-10-26：已完成已安裝版本的靜態 review。既有任務邊界、素材內指令處理、混合要求與續問規則成熟，應保留；最小改善為區分兩個 `instructions` 名稱、精簡重複描述、移除空索引與 GPT ID，不增加路由層。候選 skill 名稱為 `english-patterns`／`english-translator`，尚非已發布識別名稱。
+
+翻譯預設三版與句型例句密度為體驗偏好，留待[初版要保留哪些輸出與互動行為？](04-behavior-contract.md)與使用者確認。原 PNG 缺來源證據，初版建議不搬。報告以版本、相對檔案行號和 SHA256 識別舊來源，未將私人安裝目錄收進 repo；其中十個合成驗收案例尚未執行。內容精簡建議尚未實作，也不等於兩平台行為通過。
