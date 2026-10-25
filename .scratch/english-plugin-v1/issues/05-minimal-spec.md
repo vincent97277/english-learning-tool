@@ -2,8 +2,8 @@
 
 Type: grilling
 Labels: wayfinder:grilling
-Status: open
-Assignee: none
+Status: claimed
+Assignee: vincent97277
 Parent: ../map.md
 Blocked by: 01, 02, 03, 04
 
