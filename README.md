@@ -45,7 +45,7 @@ claude plugin list
 /english-learning-tool:english-translator 我可能會晚 10 分鐘，但還沒確定；請不要等我。
 ```
 
-也可用 `claude --plugin-dir ./` 暫時載入 checkout。Claude Code 2.1.310 的格式檢查與隔離安裝已通過；目前驗證環境未登入，**尚未驗證實際翻譯調用**。啟動清單已列出該獨立 skill 命令；實際輸出仍需登入後確認。
+也可用 `claude --plugin-dir ./` 暫時載入 checkout。Claude Code 2.1.310 的格式檢查與隔離安裝已通過；目前驗證環境未登入，**尚未驗證實際翻譯調用**。啟動清單已列出該獨立 skill 命令；使用者決定本輪暫不測語言行為，完整支援仍需日後確認。
 
 ### Codex 桌面
 

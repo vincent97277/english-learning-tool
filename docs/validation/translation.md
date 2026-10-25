@@ -13,7 +13,7 @@ Green：新增最小封裝與改善後的 skill，實際客戶端結果如下。
 | 客戶端 | Discovery／載入 | 明確入口 | 行為結果與限制 |
 | --- | --- | --- | --- |
 | Codex CLI 0.162.1 | 隔離設定下 marketplace add、list available、plugin add 成功；app-server skills/list 無錯誤，回傳 enabled skill 與 plugin ID | `$english-learning-tool:english-translator` | 從空的暫存工作目錄執行，合成案例結果見下表。沒有從 prompt 貼入 skill 本文。 |
-| Claude Code CLI 2.1.310 | 隔離設定下 validate、marketplace add、install、list 成功，狀態 enabled；啟動的 skills 與 slash_commands 均列出本 skill | `/english-learning-tool:english-translator`（啟動清單確認） | 發送該入口後停在 `Not logged in`。尚未觀察到翻譯輸出；認證是外部阻礙。 |
+| Claude Code CLI 2.1.310 | 隔離設定下 validate、marketplace add、install、list 成功，狀態 enabled；啟動的 skills 與 slash_commands 均列出本 skill | `/english-learning-tool:english-translator`（啟動清單確認） | 發送該入口後停在 `Not logged in`。尚未觀察到翻譯輸出；使用者沒有 Claude Code，已決定本輪暫不測語言行為，不啟動登入流程。 |
 | 目前使用的 Codex 桌面 | 未執行 | 待 selector 實測 | 未驗證桌面安裝、選取、輸出與舊 plugin 並存，不以 CLI 代替。 |
 
 測試來源是當前實作 checkout；Codex 安裝後從隔離快取載入。這是可變開發來源，**不是固定版本或更新驗收**。portable 根 manifest 已被 CLI 正確辨識，未增加相容 manifest。Claude validate 最後通過；僅有與公開目錄提交相關的缺圖示警告，本階段不提交目錄、不搬移舊圖示。
@@ -45,7 +45,7 @@ Green：新增最小封裝與改善後的 skill，實際客戶端結果如下。
 
 ## 尚待完成
 
-- Claude Code 已登入環境的可見翻譯、正反觸發與續接／換題。
+- Claude Code 可見翻譯、正反觸發與續接／換題：使用者本輪暫不測，不阻擋其餘實作。
 - Codex 桌面 discovery、selector、直接輸出及新舊 plugin 並存。
 - 跨回合續接偏好與換題、新舊 plugin 同時啟用下的直接入口。
 - 全包雙技能整合與固定版本／更新測試，由後續工單涵蓋。
