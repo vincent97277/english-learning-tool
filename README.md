@@ -4,7 +4,7 @@
 
 已完成研究與初版規格，下一階段進行實作，尚未提供可安裝的 plugin。決策與研究結果請見[初版決策地圖](.scratch/english-plugin-v1/map.md)。
 
-[已確認的初版規格](.scratch/english-plugin-v1/spec.md)是後續實作依據；其中的平台驗收仍須在實作階段執行。
+[正式實作規格](.scratch/english-plugin-implementation/spec.md)已將[已確認的規劃](.scratch/english-plugin-v1/spec.md)整理為需求與驗收決定；實作工單的切分待確認，平台驗收仍須在實作階段執行。
 
 ## 授權
 
