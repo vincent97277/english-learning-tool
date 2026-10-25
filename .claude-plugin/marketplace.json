@@ -1,0 +1,15 @@
+{
+  "name": "english-learning-tool",
+  "owner": {
+    "name": "vincent97277"
+  },
+  "plugins": [
+    {
+      "name": "english-learning-tool",
+      "source": "./"
+    }
+  ],
+  "metadata": {
+    "description": "English translation and sentence-pattern explanation skills."
+  }
+}
