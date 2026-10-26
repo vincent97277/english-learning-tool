@@ -1,7 +1,7 @@
 # English Learning Tool 初版實作規格
 
-Status: ready-for-agent
-日期：2026-10-26。目標版本：`0.1.0`。本規格整理自已確認的規劃，不新增功能範圍。工單切分已確認，正依 implement-spec 在整合分支執行；使用者允許先完成實作並保留待補平台驗收，本次不發布。
+Status: in-progress
+日期：2026-10-26。目標版本：`0.1.0`。三張工單的實作已整合並完成雙軸 review；使用者允許先完成實作、保留待補平台驗收，且 Claude Code 本輪暫不測。驗收未齊前保留 in-progress，本次未發布。
 
 ## Problem Statement
 
