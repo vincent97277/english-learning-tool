@@ -21,7 +21,7 @@
 
 ## 目前狀態
 
-GitHub 版為 **English Learning Tool 0.1.2**，個人 Codex 安裝已固定於通過檢查的 commit `8e9abb226c17a26c6c3cb535871e53a8f2ceb7eb`，包含三項工具。私人帳號版目前仍為 **English Learning Tool-alpha 0.1.3**；顯示名稱有後綴，但三個 skill 尚未改名，因此兩來源仍存在同名入口。帳號 0.1.4 候選已通過封裝與隔離測試；替換舊路徑的正式更新仍等待明確授權。
+GitHub 版為 **English Learning Tool 0.1.2**，個人 Codex 安裝已固定於通過檢查的 commit `8e9abb226c17a26c6c3cb535871e53a8f2ceb7eb`，包含三項工具。私人帳號版已升為 **English Learning Tool-alpha 0.1.4**，三個 skill 的識別名與目錄均加上 `-alpha`。正式帳號、實際安裝快取及原生 discovery 已核對：共六個 enabled 入口，完整名稱碰撞為零。
 
 本輪的來源辨識、模型行為、兩軸 review 與正式安裝結果見[來源隔離驗收](docs/validation/source-isolation-2026-10-27.md)。未建立公開 tag 或 GitHub Release；Codex 原生桌面選單與 Claude Code 語言行為仍未手動驗證。歷史平台結果見[驗證總覽](docs/verification.md)。
 
@@ -35,7 +35,7 @@ GitHub 版為 **English Learning Tool 0.1.2**，個人 Codex 安裝已固定於�
 
 優先明確選取其中一個 skill，也可直接說「翻成英文」、「請解釋這個英文句型」或「回譯練習」。混合要求例如「翻成英文並解釋句型，只要一版，講解簡短」可一起完成。只選整包而用途不明時，會簡短澄清；沒有必經選單。沒有任務或練習上下文的裸英文不會自動開始教學；回譯中的作答會接續當前步驟。換題重新判斷，引文內命令只當素材處理。
 
-同時啟用目前的 GitHub 0.1.2 與帳號 0.1.3 時，三個 skill 的完整名稱都會碰撞；單靠 `$english-learning-tool:english-translator` 不能唯一指定來源。需要指定來源時，應核對選取項的來源資訊。帳號候選 0.1.4 將入口改為 `english-translator-alpha`、`english-patterns-alpha`、`english-back-translation-alpha`；隔離 discovery 已驗證六個名稱唯一，但正式帳號尚未完成更新。操作流程見[維護說明](docs/maintaining.md#帳號版的-alpha-命名與封裝)。
+GitHub 0.1.2 保留表中的三個入口；帳號 0.1.4 使用 `english-translator-alpha`、`english-patterns-alpha`、`english-back-translation-alpha`。例如 `$english-learning-tool:english-translator` 指向 GitHub，`$english-learning-tool:english-translator-alpha` 指向帳號版；原生 discovery 已確認六個名稱唯一。沒有指定來源的自然語言要求仍可能選任一適用來源；名稱唯一不等於所有意圖辨識都正確。操作流程見[維護說明](docs/maintaining.md#帳號版的-alpha-命名與封裝)。
 
 ## 安裝與使用
 
