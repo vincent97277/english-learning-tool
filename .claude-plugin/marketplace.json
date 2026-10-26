@@ -1,0 +1,15 @@
+{
+  "name": "english-learning-tool",
+  "owner": {
+    "name": "vincent97277"
+  },
+  "plugins": [
+    {
+      "name": "english-learning-tool",
+      "source": "./"
+    }
+  ],
+  "metadata": {
+    "description": "A collection of English learning tools with independent skills for translation, rewriting, sentence-pattern explanations, and back-translation practice."
+  }
+}

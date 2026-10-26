@@ -1,7 +1,7 @@
 # English Learning Tool 初版實作規格
 
-Status: ready-for-agent
-日期：2026-10-26。目標版本：`0.1.0`。本規格整理自已確認的規劃，不新增功能範圍。工單切分仍待確認，這次不執行實作或發布。
+Status: in-progress
+日期：2026-10-26。目標版本：`0.1.0`。三張工單的實作已整合並完成雙軸 review；使用者允許先完成實作、保留待補平台驗收，且 Claude Code 本輪暫不測。驗收未齊前保留 in-progress，本次未發布。
 
 ## Problem Statement
 
@@ -84,5 +84,5 @@ Status: ready-for-agent
 ## Further Notes
 
 - [已確認的規劃規格](../english-plugin-v1/spec.md)是本次整理的來源；[Wayfinder 地圖](../english-plugin-v1/map.md)與已結案決策票保留作歷史依據，不因轉成實作工單而改動。
-- 翻譯來源版本為 English Translator 0.13.0，句型來源版本為 English Patterns 0.8.0；來源 review、平台及 Git 研究由上述地圖連到各自研究分支。本文件沒有宣稱已遷移、安裝、驗收或發布。
-- 本機 Markdown tracker 使用 `ready-for-agent` 表示規格已足以交付代理。實作票只有在切分與依賴獲確認後，才逐張正式發布；代理仍須遵守 blocking edges。
+- 翻譯來源版本為 English Translator 0.13.0，句型來源版本為 English Patterns 0.8.0；來源 review、平台及 Git 研究由上述地圖連到各自研究分支。本文件定義目標；實際遷移、安裝與逐平台驗收狀態見[驗證總覽](../../docs/verification.md)，尚未發布。
+- 本機 Markdown tracker 使用 `ready-for-agent` 表示規格已足以交付代理。實作票已在切分與依賴獲確認後逐張發布；代理仍須遵守 blocking edges，並依使用者授權在程式整合、平台驗收待補時接續後票。

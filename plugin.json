@@ -1,0 +1,23 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "english-learning-tool",
+  "version": "0.1.2",
+  "description": "A collection of English learning tools with independent skills for translation, rewriting, sentence-pattern explanations, and back-translation practice.",
+  "license": "MIT",
+  "author": {
+    "name": "vincent97277"
+  },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "English Learning Tool",
+        "shortDescription": "英語學習工具集",
+        "longDescription": "一套英語學習工具集合，讓你依需求選用各項工具。目前包含英文翻譯與潤飾、英文句型講解、英文回譯練習；可分別使用，也可在同一要求中搭配，並遵從你指定的格式與詳略。回譯練習依實際作答逐步提供回饋，不儲存學習紀錄。",
+        "developerName": "vincent97277",
+        "capabilities": [
+          "skills"
+        ]
+      }
+    }
+  }
+}
