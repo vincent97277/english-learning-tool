@@ -253,7 +253,14 @@ def compare_account(root, readback):
     if ".codex-plugin/plugin.json" in inventory:
         require(".codex-plugin/plugin.json" in contents, "account_overlay_missing")
         overlay = parse_json(contents[".codex-plugin/plugin.json"])
-        if any(overlay.get(k) != remote.get(k) for k in ("name", "version", "description")):
+        expected_overlay = {key: remote[key]
+                            for key in ("name", "version", "description", "author", "license")}
+        interface = copy.deepcopy(remote["extensions"]["com.openai"]["interface"])
+        interface.setdefault("category", "Other")
+        interface.setdefault("defaultPrompt", None)
+        expected_overlay.update(interface=interface, keywords=remote.get("keywords", []),
+                                skills="./skills")
+        if overlay != expected_overlay:
             differences.append("compatibility_manifest")
     return {"ok": not differences and inventory_ok and component_mismatches == 0,
             "manifest_differences": differences, "account_normalizations": normalizations,

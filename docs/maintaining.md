@@ -35,6 +35,8 @@ python3 -m venv .venv
 
 輸入是 `get_plugin_files` 的資料物件，須取得完整 inventory，並讀取 manifest、產生的 compatibility manifest（若有）、LICENSE 與全部 packaged skill 檔案。先完成每頁清單，將最後的 `next_offset` 設為 null。指令只輸出固定欄位路徑、數量與是否相符，失敗以非零狀態結束；原始值不會印出。僅容許服務正規化 `author.name`、`author.email` 與 `extensions.com.openai.interface.developerName`，其他 manifest 差異或缺檔均視為失敗。
 
+服務產生的 `.codex-plugin/plugin.json` 依讀回根 manifest 完整比對：共用 name、version、description、author、license，將 OpenAI interface 搬至頂層，缺省 category 為 `Other`、defaultPrompt 為 null、keywords 為空陣列，skills 固定為 `./skills`。未知欄位、額外設定或路徑變更均失敗；服務日後改變產生格式時，先查明差異再明確更新此約定。
+
 更新私人帳號插件前，依 Plugin Creator 的更新流程保存目前 release ID，先檢查 ZIP，再以該 ID 防止覆蓋並行更新；更新後重新讀回比對。帳號 metadata 正規化不覆寫公開 repo 的作者資訊。
 
 ### 帳號版的 alpha 命名與封裝

@@ -115,6 +115,27 @@ class PluginChecks(unittest.TestCase):
         self.assertFalse(result["ok"])
         self.assertEqual(result["component_mismatches"], 1)
 
+    def test_generated_compatibility_manifest_rejects_runtime_drift(self):
+        data = self.readback()
+        remote = json.loads(data["contents"]["plugin.json"])
+        overlay = {key: remote[key] for key in ("name", "version", "description", "author", "license")}
+        overlay.update(interface=dict(remote["extensions"]["com.openai"]["interface"],
+                                      category="Other", defaultPrompt=None),
+                       keywords=[], skills="./skills")
+        path = ".codex-plugin/plugin.json"
+        data["files"].append({"path": path})
+        data["contents"][path] = json.dumps(overlay)
+        self.assertTrue(plugin.compare_account(self.root, data)["ok"])
+        for field, value in (("skills", "./unexpected-path/"),
+                             ("private-unknown-marker", "secret-marker")):
+            with self.subTest(field=field):
+                changed = dict(overlay, **{field: value})
+                data["contents"][path] = json.dumps(changed)
+                result = plugin.compare_account(self.root, data)
+                self.assertFalse(result["ok"])
+                self.assertIn("compatibility_manifest", result["manifest_differences"])
+                self.assertNotIn("marker", json.dumps(result))
+
     def test_real_cli_failure_does_not_echo_parser_input(self):
         (self.root / "plugin.json").write_text('{"private-email-marker@example.invalid":')
         result = subprocess.run([sys.executable, str(plugin.ROOT / "scripts/plugin.py"),
