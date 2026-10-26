@@ -1,5 +1,14 @@
 # Changelog
 
+## GitHub 0.1.2 更新 — 2026-10-27
+
+- 推送既有回譯遷移與維護工具，將個人 GitHub 固定安裝從 0.1.0 更新至 `8e9abb2` 的 0.1.2；三個 canonical skill 名稱不變。
+- 新增 `account-source`，從同一來源產生三份 `*-alpha` 入口；拒絕從 alpha 副本重複派生。帳號正式版仍為 0.1.3，0.1.4 路徑替換等待明確授權。
+- 修正帳號 compatibility manifest 比對，拒絕不符的技能路徑及未知欄位；14 項測試、遠端 CI、封裝與實際安裝內容比對通過。
+- 真正個人 discovery 確認兩來源仍有三組同名碰撞；零碰撞僅為候選 alpha 的隔離結果，詳見[來源隔離驗收](docs/validation/source-isolation-2026-10-27.md)。
+
+沒有再次提高既有未交付的 GitHub 來源版本，也未建立公開 tag 或 GitHub Release。
+
 ## 帳號版 0.1.3 — alpha 命名，2026-10-26
 
 - 私人帳號版顯示名稱改為 `English Learning Tool-alpha`，保留原 plugin 身分、package name 與全部 skill。

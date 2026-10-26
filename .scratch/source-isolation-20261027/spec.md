@@ -1,6 +1,6 @@
 # 雙來源選用驗證與 GitHub 更新
 
-Status: in-progress
+Status: in-progress（GitHub 更新已套用；帳號舊路徑替換等待明確授權）
 日期：2026-10-27。使用者要求真正確認誤用情況，並更新 GitHub 版插件。
 
 ## Confirmed scope

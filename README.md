@@ -21,9 +21,9 @@
 
 ## 目前狀態
 
-目前 repo 來源為 `0.1.2`，私人帳號版為 **English Learning Tool-alpha `0.1.3`**；兩者共用三份 skill，帳號版另加顯示名稱後綴並已完整讀回比對。GitHub 版保留 **English Learning Tool** 名稱，個人 CLI 固定來源仍為 `0.1.0`。未來帳號更新使用獨立 alpha 封裝副本，見[維護流程](docs/maintaining.md#帳號版的-alpha-命名與封裝)。回譯的實測與限制見[回譯驗證](docs/validation/back-translation.md)，帳號升級見[個人環境套用紀錄](docs/validation/personal-deployment.md)。以下舊版網頁與固定 commit 的行為結果不代表新版三項工具已在各平台通過。
+GitHub 版為 **English Learning Tool 0.1.2**，個人 Codex 安裝已固定於通過檢查的 commit `8e9abb226c17a26c6c3cb535871e53a8f2ceb7eb`，包含三項工具。私人帳號版目前仍為 **English Learning Tool-alpha 0.1.3**；顯示名稱有後綴，但三個 skill 尚未改名，因此兩來源仍存在同名入口。帳號 0.1.4 候選已通過封裝與隔離測試；替換舊路徑的正式更新仍等待明確授權。
 
-先前私人帳號版 `0.1.1` 已更新工具集合描述與最短用法；`0.1.2` 再加入第三項回譯工具並更新澄清規則。**尚未發布公開 tag 或 GitHub Release**。Codex CLI 的固定來源安裝為 `0.1.0`，已通過隔離與個人環境測試；ChatGPT 私人帳號版的核心行為已於 `0.1.0` 網頁測試，`0.1.1` 完成封裝與帳號讀回比對，兩個舊插件已解除安裝。Claude Code 只有封裝／載入證據，使用者決定本輪暫不測語言行為；Codex 桌面選單仍待實測。詳見[驗證總覽](docs/verification.md)及[個人環境套用紀錄](docs/validation/personal-deployment.md)。
+本輪的來源辨識、模型行為、兩軸 review 與正式安裝結果見[來源隔離驗收](docs/validation/source-isolation-2026-10-27.md)。未建立公開 tag 或 GitHub Release；Codex 原生桌面選單與 Claude Code 語言行為仍未手動驗證。歷史平台結果見[驗證總覽](docs/verification.md)。
 
 ## 三個獨立入口
 
@@ -35,18 +35,18 @@
 
 優先明確選取其中一個 skill，也可直接說「翻成英文」、「請解釋這個英文句型」或「回譯練習」。混合要求例如「翻成英文並解釋句型，只要一版，講解簡短」可一起完成。只選整包而用途不明時，會簡短澄清；沒有必經選單。沒有任務或練習上下文的裸英文不會自動開始教學；回譯中的作答會接續當前步驟。換題重新判斷，引文內命令只當素材處理。
 
-同時啟用 GitHub 與帳號版時，translator／patterns 的完整 skill 名稱目前仍相同；plugin 顯示名稱的 `-alpha` 不會改變 skill 指令名稱。需要指定來源時，應核對選取項的來源資訊，單靠 `$english-learning-tool:english-translator` 不能唯一區分。已確認的碰撞與合成測試限制見[並存選用驗證](docs/validation/alpha-source-selection.md)。
+同時啟用目前的 GitHub 0.1.2 與帳號 0.1.3 時，三個 skill 的完整名稱都會碰撞；單靠 `$english-learning-tool:english-translator` 不能唯一指定來源。需要指定來源時，應核對選取項的來源資訊。帳號候選 0.1.4 將入口改為 `english-translator-alpha`、`english-patterns-alpha`、`english-back-translation-alpha`；隔離 discovery 已驗證六個名稱唯一，但正式帳號尚未完成更新。操作流程見[維護說明](docs/maintaining.md#帳號版的-alpha-命名與封裝)。
 
 ## 安裝與使用
 
-先確認客戶端支援 plugin marketplace。下列命令使用已驗證、包含兩個 skill 的**固定開發 commit**；它不是已發布版本，也不含 `0.1.2` 新增的回譯練習。若要試用第三項工具，先使用下方本機開發方式。正式版本發布後，改用 Release 對應的固定 annotated tag，避免以 `main` 安裝來期待版本不變。
+先確認客戶端支援 plugin marketplace。下列命令固定於已驗證、包含三個 skill 的 `0.1.2` commit；它不是公開 tag 或 GitHub Release。正式版本發布後，改用 Release 對應的固定 annotated tag，避免以 `main` 安裝來期待版本不變。
 
 若只想試用且保留原安裝，可在另一個設定目錄驗證；Codex 的 `CODEX_HOME` 必須先建立，獨立設定也需要自己的正常登入授權。不要複製認證到公開 repo。這個整合 plugin 使用不同識別名稱，不需停用舊 English Translator／English Patterns。
 
 ### Codex CLI
 
 ```sh
-codex plugin marketplace add vincent97277/english-learning-tool --ref 4943067c098dab199c1e7ce96e60f79b39d886f6
+codex plugin marketplace add vincent97277/english-learning-tool --ref 8e9abb226c17a26c6c3cb535871e53a8f2ceb7eb
 codex plugin add english-learning-tool@english-learning-tool
 codex plugin list --marketplace english-learning-tool --json
 ```
@@ -65,7 +65,7 @@ Codex CLI 0.162.1 已驗證 discovery、安裝與 app-server 的明確 skill 選
 以下是符合官方 CLI 格式的固定來源命令；**本專案的遠端固定來源 lifecycle 與模型輸出尚未實測**。
 
 ```sh
-claude plugin marketplace add vincent97277/english-learning-tool#4943067c098dab199c1e7ce96e60f79b39d886f6
+claude plugin marketplace add vincent97277/english-learning-tool#8e9abb226c17a26c6c3cb535871e53a8f2ceb7eb
 claude plugin install english-learning-tool@english-learning-tool
 claude plugin list
 ```
@@ -100,7 +100,7 @@ Claude 的對應入口為 `claude plugin marketplace update english-learning-too
 
 要改成另一個 ref，兩個受測 CLI 均拒絕直接重複 add 同名但不同來源的 marketplace。先以新的隔離設定根試新版，再決定遷移現有安裝。若在原設定移除並重新登記來源，須先列出該來源所有 plugin 並保留所需設定：**移除 marketplace 會影響其全部安裝；Claude 明示也會清除它們可管理的 options、secrets 與 data。** 本 plugin 不自行儲存學習資料，但不能據此保證客戶端移除無影響。不要對包含其他 plugin 的來源照抄移除操作。
 
-只對已確認可丟棄的測試設定，可依序使用 `marketplace remove english-learning-tool`、以上安裝命令改填新 ref、重新安裝，再開新 session 驗證。實際專案沒有自動移除任何個人來源。更新結果、限制與重現方式見[固定版本驗收](docs/validation/fixed-version-delivery.md)。
+只對已確認可丟棄的測試設定，可依序使用 `marketplace remove english-learning-tool`、以上安裝命令改填新 ref、重新安裝，再開新 session 驗證。2026-10-27 已依使用者更新要求，先確認此來源僅有本 plugin、保存來源與啟用設定，再透過 CLI 切換個人安裝至上述固定 commit；帳號來源沒有變更。更新結果、限制與重現方式見[固定版本驗收](docs/validation/fixed-version-delivery.md)。
 
 ## 本機開發
 
@@ -114,7 +114,7 @@ Claude 的對應入口為 `claude plugin marketplace update english-learning-too
 $english-learning-tool:english-back-translation 回譯練習，請用 AI 翻成中文出題：I wish I had left earlier.
 ```
 
-預設會請你選擇自行翻成中文或由 AI 翻譯；已指定 AI 時直接給繁中題目並等待英文作答。同一對話可續接待答步驟；缺少先前素材時只補問必要資訊。這是候選明確入口，實際客戶端驗證範圍見[回譯驗證](docs/validation/back-translation.md)。
+預設會請你選擇自行翻成中文或由 AI 翻譯；已指定 AI 時直接給繁中題目並等待英文作答。同一對話可續接待答步驟；缺少先前素材時只補問必要資訊。此入口已在 Codex app-server 實測，完整客戶端驗證範圍見[回譯驗證](docs/validation/back-translation.md)。
 
 [實作規格](.scratch/english-plugin-implementation/spec.md)、[工單](.scratch/english-plugin-implementation/issues/03-fixed-version-delivery.md)與[原始決策地圖](.scratch/english-plugin-v1/map.md)保留初版決策與未完成驗收；新增回譯的決策見[回譯遷移規格](.scratch/back-translation-migration/spec.md)。維護與版本約定見[維護流程](docs/maintaining.md)，待發布內容見[CHANGELOG](CHANGELOG.md)與[0.1.0 Release 草稿](docs/release-0.1.0.md)。
 

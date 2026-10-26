@@ -68,3 +68,13 @@ Codex CLI 的固定 GitHub 來源保持原 0.1.0 commit；本次私人帳號 met
 - GitHub repo manifest 仍為 0.1.2／English Learning Tool；既有 GitHub 安裝仍為 0.1.0，固定 commit 未切換。沒有更名、停用或移除 GitHub 版。
 
 這次只改帳號顯示資訊與版號，未重跑語言行為。尚未直接驗證外掛頁及 `@` 選單呈現；兩個來源的 skill 名稱保持相同，更名不代表重複入口被合併。之後帳號更新依[alpha 封裝流程](../maintaining.md#帳號版的-alpha-命名與封裝)保留後綴，讀回以該次封裝副本為準。
+
+## 2026-10-27：GitHub 固定安裝升至 0.1.2
+
+- 更新前以 CLI 確認 `english-learning-tool` marketplace 僅有此一 plugin，版本 0.1.0、enabled；僅保存該來源及該 plugin 的設定，不備份認證或其他設定。
+- 官方 CLI 移除該 marketplace、重新登記已推送的固定 commit `8e9abb226c17a26c6c3cb535871e53a8f2ceb7eb`，再安裝同一 plugin。結果為 0.1.2、enabled=true；沒有更動帳號版或其他 marketplace。
+- 來源快照及原生 discovery 回傳的安裝快取，根 manifest、LICENSE 與三個 skill 共五個檔案均逐位元符合該 commit；三個入口 enabled。
+- `plugin/list` 明確要求 local 及 created-by-me-remote catalog 並重新取得，然後 `skills/list` 強制重掃，確認帳號仍為 0.1.3；更新前有兩組完整名稱碰撞，GitHub 新增回譯入口後為三組。不能以顯示名稱後綴視為來源已唯一。
+- 帳號 0.1.4 候選已準備。自動核准審查拒絕包含刪除三個舊 SKILL.md 路徑的更新，未接受先前的名稱修正授權；已請使用者明確確認帳號更新及路徑替換，尚未部署，也未以其他 plugin 或殘留舊入口繞過。
+
+本輪行為結果及 review 見[來源隔離驗收](source-isolation-2026-10-27.md)。原生桌面 `@` 選單仍未手動操作；未建立公開 tag 或 GitHub Release。

@@ -1,7 +1,8 @@
 # 驗證總覽
 
-目前 repo 來源為 `0.1.2`，新增第三個 skill `english-back-translation`；本輪回譯、封裝與客戶端結果見[回譯驗證](validation/back-translation.md)。私人帳號另完成顯示名稱修訂，現為 `English Learning Tool-alpha`／`0.1.3`，已與獨立帳號封裝副本完整讀回比對；個人 CLI 固定來源仍為 `0.1.0`。以下紀錄及既有 review 描述前兩個 skill 的歷史結果，不表示新入口已在各平台通過。
+2026-10-27：GitHub 0.1.2 已推送並套用個人 Codex 固定安裝 `8e9abb2`，三個 skill enabled；來源快照與安裝快取的五個封裝檔案均與 commit 相符。帳號仍為 English Learning Tool-alpha 0.1.3，三組同名碰撞仍存在；0.1.4 候選的六個唯一名稱只在隔離環境驗證，正式替換等待明確授權。本輪 14 項測試、遠端 CI 與兩軸 review 已完成，最新模型行為與限制以[來源隔離驗收](validation/source-isolation-2026-10-27.md)為準。
 
+以下保留 2026-10-26 的各平台歷史結果，不表示新版入口均已在各平台通過。
 日期：2026-10-26。`0.1.0` 已套用 Codex 個人環境與 ChatGPT 私人帳號，兩個舊插件已解除安裝；尚未發布公開 tag 或 GitHub Release，跨客戶端驗收仍有缺口。
 
 後續私人帳號修訂 `0.1.1` 已更新工具集合描述；JSON／YAML、manifest 一致性、實際 ZIP 與安全帳號比對共 11 項回歸通過，帳號讀回無非預期差異、無缺檔。已新增輕量 CI 工作，但尚未推送觸發 GitHub Actions；本機執行相同命令通過。兩份 skill 未變，未重跑模型案例；Codex CLI 的固定來源仍為既有 `0.1.0` commit。
@@ -23,6 +24,7 @@
 - [固定版本與交付](validation/fixed-version-delivery.md)：真實固定 commit、產品內容 fixture 的 refresh／切版、最小回歸與限制。
 - [個人環境套用](validation/personal-deployment.md)：Codex 個人環境、ChatGPT 私人帳號版與舊插件移除。
 - [英文回譯遷移](validation/back-translation.md)：`0.1.2` 新入口的內容改善、逐輪練習及相關回歸；與上述舊版結果分開記錄。
+- [來源隔離與 GitHub 更新](validation/source-isolation-2026-10-27.md)：2026-10-27 的實際個人碰撞、alpha 候選、模型回合、review 與固定安裝更新。
 - [alpha 與 GitHub 並存選用](validation/alpha-source-selection.md)：顯示名稱後綴不能消除完整 skill 名稱碰撞；隔離模型案例與來源辨識限制。
 
 三份紀錄描述各階段來源；前兩階段是可變開發 checkout，固定來源的結果另見交付紀錄。既有完整行為案例未因文件變更而全量重跑；新來源／更新只執行相關最小回歸。
