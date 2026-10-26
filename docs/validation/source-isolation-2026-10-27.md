@@ -9,10 +9,11 @@
 | 狀態 | GitHub | 帳號 | enabled 入口／同名組數 |
 | --- | --- | --- | --- |
 | 更新前的個人設定 | 0.1.0，固定 `4943067` | 0.1.3，顯示名含 alpha | 5／2，translator、patterns |
-| 本輪更新後的個人設定 | 0.1.2，固定 `8e9abb2` | 仍為 0.1.3 | 6／3，含 back-translation |
+| 僅更新 GitHub 後的個人設定 | 0.1.2，固定 `8e9abb2` | 仍為 0.1.3 | 6／3，含 back-translation |
+| 帳號正式更新後的個人設定 | 0.1.2，固定 `8e9abb2` | 0.1.4，三個 `*-alpha` 入口 | 6／0 |
 | 隔離候選，同時安裝兩來源 | 0.1.2 canonical 入口 | 0.1.4，三個 `*-alpha` 入口 | 6／0 |
 
-因此只有 plugin 顯示名稱帶 `-alpha`，不能唯一區分 skill。正式帳號尚未改名，實際個人環境的碰撞仍存在；不能宣稱已消除誤選風險。
+只有 plugin 顯示名稱帶 `-alpha`，不能唯一區分 skill。本輪帳號正式升級後，實際個人環境已無完整名稱碰撞；這項結果不保證所有自然語言意圖都不會誤選。
 
 隔離測試先使用帳號 0.1.3／GitHub 候選 0.1.2 重現三組碰撞，唯一名稱檢查非零失敗。`account-source` 只改帳號副本的顯示名稱、版本、三個 skill 目錄及 frontmatter 名稱，保留正文與 package 身分；改用候選帳號副本後同一 discovery 檢查為零碰撞。
 
@@ -49,6 +50,13 @@
 - Standards review 為 0 findings。Spec review 的一項 P2 已修正，針對修正複審後無未解問題；兩軸 review 不替代待補的平台驗收。
 - [PR #1](https://github.com/vincent97277/english-learning-tool/pull/1) 承載 GitHub 更新。未建立公開 tag 或 GitHub Release。
 
-帳號正式更新仍受阻：自動核准審查拒絕刪除被新 alpha 檔案取代的三個舊 SKILL.md 路徑，未接受先前名稱修正授權。已請使用者明確確認帳號 0.1.4 更新及舊路徑替換；目前正式帳號仍為 0.1.3，不以新增另一 plugin、保留舊入口或直接改快取繞過。候選 0.1.4 ZIP 並未部署。
+帳號更新曾因自動核准審查未接受先前名稱修正授權而受阻。之後使用者明確回覆「授權帳號更新及舊路徑替換」，於同日完成：
+
+- 更新前重新完整讀取 0.1.3，比對既有來源通過；檢查候選 ZIP，以新觀察到的 release ID 更新同一私人 plugin，精確刪除三個被取代的舊 SKILL.md 路徑。
+- 更新結果為 USER／PRIVATE 0.1.4，plugin 身分不變；六檔完整讀回 release 一致、三個舊路徑消失，嚴格 manifest／inventory／component 比對通過。
+- 官方 app-server 重新取得正式 catalog，再 forceReload skills；六個 canonical／alpha 入口均 enabled、名稱碰撞為零。
+- 帳號實際安裝快取為 0.1.4，六檔與帳號來源完整比對通過，舊路徑不存在；GitHub skill 仍符合固定 commit。沒有手動改快取。
+
+本次帳號更新只修改名稱／路徑及版本，三份正文與先前候選模型案例相同，因此不另重跑語言測試。
 
 原生桌面 `@` 選單未手動驗證；本輪不作零誤用保證。

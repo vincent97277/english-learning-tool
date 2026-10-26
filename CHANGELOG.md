@@ -1,11 +1,19 @@
 # Changelog
 
+## 帳號版 0.1.4 — skill 名稱區分，2026-10-27
+
+- 依使用者明確授權，將三個帳號 skill 的識別名及目錄加上 `-alpha`，移除被取代的三份舊 SKILL.md；正文、plugin 身分及 USER／PRIVATE 範圍保留。
+- 帳號六檔完整讀回、更新 release 核對及實際安裝快取比對均通過；重新取得正式來源並強制重掃 skills 後，六個入口 enabled、同名碰撞為零。
+- GitHub 仍為 0.1.2 與固定 `8e9abb2`，沒有因帳號更新再升版。既有隔離模型結果適用於相同技能正文；本次驗證正式部署與載入，不重跑未變的語言案例。
+
+詳見[來源隔離驗收](docs/validation/source-isolation-2026-10-27.md)。原生桌面選單未手動操作，不作所有自然語言要求皆不會誤選的保證。
+
 ## GitHub 0.1.2 更新 — 2026-10-27
 
 - 推送既有回譯遷移與維護工具，將個人 GitHub 固定安裝從 0.1.0 更新至 `8e9abb2` 的 0.1.2；三個 canonical skill 名稱不變。
-- 新增 `account-source`，從同一來源產生三份 `*-alpha` 入口；拒絕從 alpha 副本重複派生。帳號正式版仍為 0.1.3，0.1.4 路徑替換等待明確授權。
+- 新增 `account-source`，從同一來源產生三份 `*-alpha` 入口；拒絕從 alpha 副本重複派生。當時帳號正式版為 0.1.3，0.1.4 路徑替換等待明確授權；後續已完成，見上節。
 - 修正帳號 compatibility manifest 比對，拒絕不符的技能路徑及未知欄位；14 項測試、遠端 CI、封裝與實際安裝內容比對通過。
-- 真正個人 discovery 確認兩來源仍有三組同名碰撞；零碰撞僅為候選 alpha 的隔離結果，詳見[來源隔離驗收](docs/validation/source-isolation-2026-10-27.md)。
+- 當時個人 discovery 確認兩來源有三組同名碰撞；後續正式零碰撞結果，詳見[來源隔離驗收](docs/validation/source-isolation-2026-10-27.md)。
 
 沒有再次提高既有未交付的 GitHub 來源版本，也未建立公開 tag 或 GitHub Release。
 

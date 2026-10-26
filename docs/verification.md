@@ -1,6 +1,6 @@
 # 驗證總覽
 
-2026-10-27：GitHub 0.1.2 已推送並套用個人 Codex 固定安裝 `8e9abb2`，三個 skill enabled；來源快照與安裝快取的五個封裝檔案均與 commit 相符。帳號仍為 English Learning Tool-alpha 0.1.3，三組同名碰撞仍存在；0.1.4 候選的六個唯一名稱只在隔離環境驗證，正式替換等待明確授權。本輪 14 項測試、遠端 CI 與兩軸 review 已完成，最新模型行為與限制以[來源隔離驗收](validation/source-isolation-2026-10-27.md)為準。
+2026-10-27：GitHub 0.1.2 已推送並套用個人 Codex 固定安裝 `8e9abb2`，三個 skill enabled；來源快照與安裝快取的五個封裝檔案均與 commit 相符。帳號已更新為 English Learning Tool-alpha 0.1.4，三個 skill 名稱及目錄加上 `-alpha`，舊路徑已移除；帳號完整讀回及實際安裝快取比對通過，正式個人 discovery 六個入口 enabled、名稱碰撞為零。本輪 14 項測試、遠端 CI 與兩軸 review 已完成，最新模型行為與限制以[來源隔離驗收](validation/source-isolation-2026-10-27.md)為準。
 
 以下保留 2026-10-26 的各平台歷史結果，不表示新版入口均已在各平台通過。
 日期：2026-10-26。`0.1.0` 已套用 Codex 個人環境與 ChatGPT 私人帳號，兩個舊插件已解除安裝；尚未發布公開 tag 或 GitHub Release，跨客戶端驗收仍有缺口。

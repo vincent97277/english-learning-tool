@@ -45,7 +45,7 @@ python3 -m venv .venv
 
 - GitHub 版保留 `English Learning Tool`，repo manifest、package name、marketplace 及既有固定 ref 安裝不因帳號更名而修改。
 - 帳號版的 `extensions.com.openai.interface.displayName` 固定為 `English Learning Tool-alpha`。更新既有私人 plugin，不另建身分；package `name` 保持不變。2026-10-27 使用者進一步確認：三個帳號 skill 的識別名及目錄也加上 `-alpha`，GitHub skill 名稱維持原樣。
-- 帳號版每次有修改仍須升版。顯示名稱修訂為帳號版 `0.1.3`，skill 識別名修訂候選為 `0.1.4`；repo 及 2026-10-27 更新後的 GitHub 安裝均為 `0.1.2`。`-alpha` 是顯示名稱後綴，不是 SemVer prerelease 欄位。
+- 帳號版每次有修改仍須升版。顯示名稱修訂為帳號版 `0.1.3`，skill 識別名修訂已部署為 `0.1.4`；repo 及 2026-10-27 更新後的 GitHub 安裝均為 `0.1.2`。`-alpha` 是顯示名稱後綴，不是 SemVer prerelease 欄位。
 
 帳號更新以 `account-source` 從當次 repo 來源派生獨立副本，放在 gitignored 的 `.acceptance-local/`，而非修改 GitHub manifest。副本只包含根 manifest、LICENSE、skills、檢查所需的兩份 Claude metadata 與 Codex catalog；不複製認證、快取或學習資料。命令保留 manifest 其他設定及技能正文，修改顯示名稱、skill 名稱／目錄與副本的根／Claude manifest 版號。它拒絕覆寫既有目錄，也拒絕把已派生的 alpha 副本再次當作 GitHub 來源，避免產生 `-alpha-alpha`。
 
