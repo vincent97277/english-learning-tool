@@ -19,7 +19,8 @@ take priority over defaults. Complete any other requested work alongside it.
 - Explicit selection of this skill with source text requests English translation
   or natural English rewriting. With no source or clearly identified passage,
   ask briefly for the text. Selecting the whole plugin without a clear task
-  calls for one short clarification between translation and explanation.
+  calls for one short task clarification, including back-translation practice
+  when relevant.
 - Without explicit selection, require a clear English translation or rewriting
   request. For a generic “translate this,” establish the target language from
   context or ask which language.

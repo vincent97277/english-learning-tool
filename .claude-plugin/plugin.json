@@ -1,7 +1,7 @@
 {
   "name": "english-learning-tool",
-  "version": "0.1.0",
-  "description": "English translation and sentence-pattern explanation skills.",
+  "version": "0.1.2",
+  "description": "A collection of English learning tools with independent skills for translation, rewriting, sentence-pattern explanations, and back-translation practice.",
   "license": "MIT",
   "author": {
     "name": "vincent97277"

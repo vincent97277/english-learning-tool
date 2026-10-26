@@ -10,7 +10,7 @@
 
 ## 驗證與已知限制
 
-Codex CLI 0.162.1 的隔離載入、合成語言案例、舊插件並存與固定來源驗證已有紀錄。app-server 的明確選取不等於 TUI／桌面 selector 已測。Claude Code 2.1.310 僅完成既有封裝、本機安裝與 inventory；使用者沒有 Claude Code，本輪暫不測其語言與產品更新 lifecycle。Codex 桌面實際安裝、selector、輸出、並存及切版待補。
+Codex CLI 0.162.1 的隔離載入、合成語言案例、舊插件並存與固定來源驗證已有紀錄；之後已完成個人 CLI 安裝與三案回歸，以及 ChatGPT 私人帳號版儲存、安裝與三個網頁案例，通過後解除安裝兩舊插件。app-server 的明確選取及 ChatGPT 網頁結果不等於 TUI／桌面 selector 已測。Claude Code 2.1.310 僅完成既有封裝、本機安裝與 inventory；使用者沒有 Claude Code，本輪暫不測其語言與產品更新 lifecycle。Codex 桌面實際安裝、selector、輸出、並存及切版待補。
 
 各項結果與範圍見[驗證總覽](verification.md)。目前保留平台驗收未完成，不能宣稱三客戶端完整支援。
 

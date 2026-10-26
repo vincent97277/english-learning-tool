@@ -20,7 +20,7 @@ priority over defaults. Complete any other requested work alongside it.
   A narrower instruction such as “translate only” takes priority. With no source,
   named construction, or identifiable context, ask briefly for the material.
   Selecting the whole plugin without a clear task calls for one short
-  clarification between translation and explanation.
+  task clarification, including back-translation practice when relevant.
 - Without explicit selection, require an explanation request or clear ongoing
   explanation context. A question about a word's role, a comparison, more
   examples, or the next sentence can continue that exchange; preserve relevant
